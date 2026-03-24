@@ -1,12 +1,36 @@
 {
   "name": "openrazer-sdk",
   "version": "1.0.0",
-  "description": "Node.js SDK for OpenRazer daemon",
+  "description": "Node.js SDK for controlling Razer peripherals via the OpenRazer daemon",
+  "author": "zjbqdzq",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirenqinggege/openrazer-sdk.git"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "razer",
+    "openrazer",
+    "chroma",
+    "rgb",
+    "lighting",
+    "gaming",
+    "peripherals"
+  ],
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "dbus-native": "^0.4.0"
